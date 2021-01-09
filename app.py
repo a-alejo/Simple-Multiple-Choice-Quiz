@@ -12,16 +12,17 @@ questions = [
     Question(question_prompts[1], 'c'),
     Question(question_prompts[2], 'b'),
     Question(question_prompts[3], 'b'),
-
-
 ]
+
+
 # function to run the test and checks responses
-def run_test(questions):
+def run_test(ask_questions):
     score = 0
-    for question in questions:
-        answer =input(question.prompt)
-        if answer == question.answer:
+    for ask in ask_questions:
+        answer = input(ask.prompt)
+        if answer == ask.answer:
             score += 1
-    print('You got '+ str(score) + '/' + str(len(questions)) + ' correct!')
+    print('You got ' + str(score) + '/' + str(len(ask_questions)) + ' correct!')
+
 
 run_test(questions)
